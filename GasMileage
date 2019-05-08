@@ -2,59 +2,38 @@ package cs1410;
 
 /**
  * Prints out type of car, number of miles, cost of gas, and number of gallons for a car.
- * 
  * @author Morgan Mischo
  *
  */
-import javax.swing.JOptionPane;
-import java.util.Scanner; 
-/** importing the dialog box thing and the scanner
- * 
- *
- */
+import cs1410lib.Dialogs;
 
 public class GasMileage
 {
 
     public static void main (String[] args)
     {
-        /** All of these just print out the questions
-         * 
-         */
-        JOptionPane.showMessageDialog(null, "What type of car do you own?" );
-        JOptionPane.showMessageDialog(null, "How many miles have you driven since it was purchased?"); 
-        JOptionPane.showMessageDialog(null,"What's the price for a gallon of gas?"); 
-        JOptionPane.showMessageDialog(null,"How many gallons are needed to fill the tank?");
-
-        /** Creating the scanner and the objects
-         * 
-         */
-        Scanner sc = new Scanner(System.in);
-        String car = sc.next();
-        int miles = sc.nextInt(); 
-        double gas = sc.nextDouble(); 
-        double gallon = sc.nextDouble(); 
+        //Asking questions and gathering user input
+        String carType = Dialogs.showInputDialog("What type of car do you own?");
+        String milesDriven = Dialogs.showInputDialog("How many miles have you driven since it was purchased?");
+        String gasPrice = Dialogs.showInputDialog("What's the price for a gallon of gas?");
+        String gallonsNeeded = Dialogs.showInputDialog("How many gallons are needed to fill the tank?");
         
-        /** closing the scanner
-         * 
-         */
-        sc.close(); 
+        //Printing out carType to dialog and console 
+        Dialogs.showMessageDialog("Type of Car: " + carType);
+        System.out.println("Type of Car: " + carType);
         
-        /** printing out the user's answers in dialog boxes
-         * 
-         */
-        JOptionPane.showMessageDialog(null, "Type of car: " + car); 
-        JOptionPane.showMessageDialog(null, "Amount of miles: " + miles); 
-        JOptionPane.showMessageDialog(null, "Price of gas: " + gas); 
-        JOptionPane.showMessageDialog(null, "Number of gallons: " + gallon); 
+        //Printing out milesDriven to dialog and console
+        Dialogs.showMessageDialog("Miles driven: " + milesDriven);
+        System.out.println("Miles driven: " + milesDriven);
         
-        /** printing out the user's answers in the console
-         * 
-         */
-        System.out.println("Type of car: " + car);
-        System.out.println("Amount of miles: " + miles); 
-        System.out.println("Price of gas: " + gas);
-        System.out.println("Number of gallons: " + gallon);
+        //Printing out gasPrice to dialog and console
+        Dialogs.showMessageDialog("Price of gas: " + gasPrice);
+        System.out.println("Price of gas: " + gasPrice);
+        
+        //Printing out gallonsNeeded to dialog and console
+        Dialogs.showMessageDialog("Gallons needed to fill tank: " + gallonsNeeded);
+        System.out.println("Gallons needed to fill tank: " + gallonsNeeded);
+        
              
         
     }
