@@ -1,0 +1,62 @@
+package cs1410;
+
+/**
+ * Prints out type of car, number of miles, cost of gas, and number of gallons for a car.
+ * 
+ * @author Morgan Mischo
+ *
+ */
+import javax.swing.JOptionPane;
+import java.util.Scanner; 
+/** importing the dialog box thing and the scanner
+ * 
+ *
+ */
+
+public class GasMileage
+{
+
+    public static void main (String[] args)
+    {
+        /** All of these just print out the questions
+         * 
+         */
+        JOptionPane.showMessageDialog(null, "What type of car do you own?" );
+        JOptionPane.showMessageDialog(null, "How many miles have you driven since it was purchased?"); 
+        JOptionPane.showMessageDialog(null,"What's the price for a gallon of gas?"); 
+        JOptionPane.showMessageDialog(null,"How many gallons are needed to fill the tank?");
+
+        /** Creating the scanner and the objects
+         * 
+         */
+        Scanner sc = new Scanner(System.in);
+        String car = sc.next();
+        int miles = sc.nextInt(); 
+        double gas = sc.nextDouble(); 
+        double gallon = sc.nextDouble(); 
+        
+        /** closing the scanner
+         * 
+         */
+        sc.close(); 
+        
+        /** printing out the user's answers in dialog boxes
+         * 
+         */
+        JOptionPane.showMessageDialog(null, "Type of car: " + car); 
+        JOptionPane.showMessageDialog(null, "Amount of miles: " + miles); 
+        JOptionPane.showMessageDialog(null, "Price of gas: " + gas); 
+        JOptionPane.showMessageDialog(null, "Number of gallons: " + gallon); 
+        
+        /** printing out the user's answers in the console
+         * 
+         */
+        System.out.println("Type of car: " + car);
+        System.out.println("Amount of miles: " + miles); 
+        System.out.println("Price of gas: " + gas);
+        System.out.println("Number of gallons: " + gallon);
+             
+        
+    }
+
+}
